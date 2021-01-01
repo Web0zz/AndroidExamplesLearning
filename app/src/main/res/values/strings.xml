@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">HashGeneratorApp</string>
+    <string name="welcome">WELCOME</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="login">LOGIN</string>
+    <string name="don_t_have_an_account">Don&apos;t have an account?</string>
+    <string name="error_login">Username or Password incorrect</string>
+    <string name="sign_in">SIGN UP</string>
+    <string name="create">Create</string>
+    <string name="welcome_back_nuser">Welcome back,</string>
+    <string name="generate_new_hash">GENERATE NEW HASH</string>
+    <string name="your_hash_history">YOUR HASH HISTORY</string>
+    <string name="you_can_create_new_hash">You can create new hash,</string>
+    <string name="just_choose_hashing_type_and_we_convert_it_for_you">Just choose hashing type and we convert it for you</string>
+    <string name="you_can_copy_saved_hash">You can copy saved hash</string>
+    <string name="with_one_click_you_can_copy_hash_that_you_created">With one click you can copy hash that you created</string>
+</resources>

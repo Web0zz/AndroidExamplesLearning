@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/space_cadet"
+    tools:context=".homeScreen">
+
+        <TextView
+            android:id="@+id/hello_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="52dp"
+            android:layout_marginEnd="32dp"
+            android:elevation="5dp"
+            android:shadowColor="@color/alice_blue"
+            android:text="@string/welcome_back_nuser"
+            android:textColor="@color/alice_blue"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.031"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/username"
+            android:textColor="@color/crimson"
+            android:textSize="18sp"
+            android:elevation="5dp"
+            app:layout_constraintEnd_toEndOf="@+id/hello_user"
+            app:layout_constraintHorizontal_bias="0.145"
+            app:layout_constraintStart_toStartOf="@+id/hello_user"
+            app:layout_constraintTop_toBottomOf="@+id/hello_user" />
+
+
+
+        <Button
+            android:id="@+id/new_hash"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="140dp"
+            android:background="@drawable/button_background"
+            android:text="@string/generate_new_hash"
+            android:textColor="@color/alice_blue"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/hello_user" />
+
+        <Button
+            android:id="@+id/hash_history"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="120dp"
+            android:background="@drawable/button_background"
+            android:text="@string/your_hash_history"
+            android:textColor="@color/alice_blue"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/new_hash" />
+
+        <TextView
+            android:id="@+id/info_newhash_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="44dp"
+            android:text="@string/you_can_create_new_hash"
+            android:textColor="@color/alice_blue"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/new_hash"
+            app:layout_constraintEnd_toEndOf="@+id/new_hash"
+            app:layout_constraintHorizontal_bias="0.044"
+            app:layout_constraintStart_toStartOf="@+id/new_hash" />
+
+        <TextView
+            android:id="@+id/info_newhash_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="@string/just_choose_hashing_type_and_we_convert_it_for_you"
+            android:textSize="15sp"
+            android:textColor="@color/alice_blue"
+            android:alpha="0.8"
+            app:layout_constraintEnd_toEndOf="@+id/info_newhash_header"
+            app:layout_constraintHorizontal_bias="0.047"
+            app:layout_constraintStart_toStartOf="@+id/info_newhash_header"
+            app:layout_constraintTop_toBottomOf="@+id/info_newhash_header" />
+
+        <TextView
+            android:id="@+id/info_oldhash_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="44dp"
+            android:text="@string/you_can_copy_saved_hash"
+            android:textColor="@color/alice_blue"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/hash_history"
+            app:layout_constraintEnd_toEndOf="@+id/hash_history"
+            app:layout_constraintHorizontal_bias="0.007"
+            app:layout_constraintStart_toStartOf="@+id/hash_history" />
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:alpha="0.8"
+            android:text="@string/with_one_click_you_can_copy_hash_that_you_created"
+            android:textColor="@color/alice_blue"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="@+id/info_oldhash_header"
+            app:layout_constraintHorizontal_bias="0.047"
+            app:layout_constraintStart_toStartOf="@+id/info_oldhash_header"
+            app:layout_constraintTop_toBottomOf="@+id/info_oldhash_header" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
