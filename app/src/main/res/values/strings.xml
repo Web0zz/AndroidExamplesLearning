@@ -15,4 +15,5 @@
     <string name="just_choose_hashing_type_and_we_convert_it_for_you">Just choose hashing type and we convert it for you</string>
     <string name="you_can_copy_saved_hash">You can copy saved hash</string>
     <string name="with_one_click_you_can_copy_hash_that_you_created">With one click you can copy hash that you created</string>
+    <string name="tag">Tag</string>
 </resources>
