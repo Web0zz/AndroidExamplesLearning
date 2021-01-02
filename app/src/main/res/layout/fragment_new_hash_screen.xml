@@ -8,25 +8,159 @@
     android:background="@color/space_cadet">
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/menu"
-        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+        android:id="@+id/tagging_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="25dp"
-        android:layout_marginTop="200dp"
+        android:layout_marginTop="150dp"
         android:layout_marginEnd="25dp"
-        android:hint="@string/username"
         android:textColorHint="@color/space_cadet"
-        app:startIconDrawable="@drawable/ic_lock"
-        app:endIconTint="@color/space_cadet"
-        app:startIconTint="@color/space_cadet"
+        app:boxBackgroundColor="@color/alice_blue"
+        app:boxCornerRadiusBottomEnd="20dp"
+        app:boxCornerRadiusBottomStart="20dp"
+        app:boxCornerRadiusTopEnd="20dp"
+        app:boxCornerRadiusTopStart="20dp"
+        app:boxStrokeWidth="0dp"
+        app:boxStrokeWidthFocused="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/hash_type_layout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <AutoCompleteTextView
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/hash_tag"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="none" />
+            android:hint="@string/tag_your_hash"
+            android:textSize="16sp"/>
     </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/hash_type_layout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="55dp"
+        android:layout_marginEnd="25dp"
+        android:textColorHint="@color/space_cadet"
+        app:boxBackgroundColor="@color/alice_blue"
+        app:boxCornerRadiusBottomEnd="20dp"
+        app:boxCornerRadiusBottomStart="20dp"
+        app:boxCornerRadiusTopEnd="20dp"
+        app:boxCornerRadiusTopStart="20dp"
+        app:boxStrokeWidth="0dp"
+        app:boxStrokeWidthFocused="0dp"
+        app:endIconTint="@color/space_cadet"
+        app:layout_constraintEnd_toEndOf="@+id/tagging_layout"
+        app:layout_constraintStart_toStartOf="@+id/tagging_layout"
+        app:layout_constraintTop_toBottomOf="@+id/tagging_layout"
+        app:startIconDrawable="@drawable/ic_lock"
+        app:startIconTint="@color/space_cadet">
+
+        <AutoCompleteTextView
+            android:id="@+id/hash_selected"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="none"
+            android:paddingTop="12.5dp"
+            android:paddingBottom="12.5dp"
+            android:text="SHA-256"
+            android:textColor="@color/space_cadet"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <EditText
+        android:id="@+id/typed_text"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="55dp"
+        android:layout_marginEnd="25dp"
+        android:background="@drawable/text_input_background"
+        android:backgroundTint="#FFFFFF"
+        android:ems="10"
+        android:gravity="start|top"
+        android:hint="@string/type_here"
+        android:inputType="textPersonName"
+        android:maxLines="6"
+        android:padding="15dp"
+        android:textColor="@color/space_cadet"
+        android:textColorHint="@color/space_cadet"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/hash_type_layout"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="@+id/hash_type_layout"
+        app:layout_constraintTop_toBottomOf="@+id/hash_type_layout" />
+
+    <Button
+        android:id="@+id/generate_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/generate"
+        android:textSize="24sp"
+        android:textColor="@color/alice_blue"
+        android:background="@drawable/button_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/typed_text" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="@string/create_new_hash"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/alice_blue"
+        app:layout_constraintEnd_toEndOf="@+id/tagging_layout"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/tagging_layout"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/tag_for_copy_this_hash_later"
+        android:textColor="@color/alice_blue"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/tagging_layout"
+        app:layout_constraintEnd_toEndOf="@+id/tagging_layout"
+        app:layout_constraintHorizontal_bias="0.056"
+        app:layout_constraintStart_toStartOf="@+id/tagging_layout"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="@string/select_which_hashing_algorithm_to_use"
+        android:textColor="@color/alice_blue"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/hash_type_layout"
+        app:layout_constraintEnd_toEndOf="@+id/hash_type_layout"
+        app:layout_constraintHorizontal_bias="0.033"
+        app:layout_constraintStart_toStartOf="@+id/hash_type_layout" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="@string/type_you_want_to_convert"
+        android:textColor="@color/alice_blue"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/typed_text"
+        app:layout_constraintEnd_toEndOf="@+id/typed_text"
+        app:layout_constraintHorizontal_bias="0.021"
+        app:layout_constraintStart_toStartOf="@+id/typed_text" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

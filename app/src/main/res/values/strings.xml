@@ -16,4 +16,11 @@
     <string name="you_can_copy_saved_hash">You can copy saved hash</string>
     <string name="with_one_click_you_can_copy_hash_that_you_created">With one click you can copy hash that you created</string>
     <string name="tag">Tag</string>
+    <string name="tag_your_hash">Tag your hash</string>
+    <string name="type_here">Type here</string>
+    <string name="generate">Generate</string>
+    <string name="create_new_hash">Create new hash</string>
+    <string name="tag_for_copy_this_hash_later">Tag for copy this hash later</string>
+    <string name="select_which_hashing_algorithm_to_use">Select which hashing algorithm to use</string>
+    <string name="type_you_want_to_convert">Type you want to convert</string>
 </resources>
