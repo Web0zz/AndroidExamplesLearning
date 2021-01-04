@@ -40,7 +40,6 @@
             app:layout_constraintTop_toBottomOf="@+id/hello_user" />
 
 
-
         <Button
             android:id="@+id/new_hash"
             android:layout_width="wrap_content"
@@ -88,10 +87,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
-            android:text="@string/just_choose_hashing_type_and_we_convert_it_for_you"
-            android:textSize="15sp"
-            android:textColor="@color/alice_blue"
+            android:layout_marginBottom="12dp"
             android:alpha="0.8"
+            android:text="@string/just_choose_hashing_type_and_we_convert_it_for_you"
+            android:textColor="@color/alice_blue"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toTopOf="@+id/new_hash"
             app:layout_constraintEnd_toEndOf="@+id/info_newhash_header"
             app:layout_constraintHorizontal_bias="0.047"
             app:layout_constraintStart_toStartOf="@+id/info_newhash_header"
@@ -116,10 +117,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
+            android:layout_marginBottom="12dp"
             android:alpha="0.8"
             android:text="@string/with_one_click_you_can_copy_hash_that_you_created"
             android:textColor="@color/alice_blue"
             android:textSize="15sp"
+            app:layout_constraintBottom_toTopOf="@+id/hash_history"
             app:layout_constraintEnd_toEndOf="@+id/info_oldhash_header"
             app:layout_constraintHorizontal_bias="0.047"
             app:layout_constraintStart_toStartOf="@+id/info_oldhash_header"
