@@ -25,7 +25,6 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/username"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
@@ -35,28 +34,26 @@
         android:hint="@string/username"
         android:shadowColor="@color/alice_blue"
         android:textColorHint="@color/space_cadet"
-        app:boxBackgroundColor="@color/alice_blue"
-        app:boxCornerRadiusBottomEnd="20dp"
-        app:boxCornerRadiusBottomStart="20dp"
-        app:boxCornerRadiusTopEnd="20dp"
-        app:boxCornerRadiusTopStart="20dp"
-        app:hintAnimationEnabled="true"
+        app:hintTextColor="@color/space_cadet"
+        android:background="@drawable/text_input_background"
         app:layout_constraintBottom_toTopOf="@+id/password"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.055"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:startIconDrawable="@drawable/ic_user">
+        app:startIconDrawable="@drawable/ic_user"
+        app:startIconTint="@color/space_cadet">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="@color/space_cadet" />
+            android:inputType="text"
+            android:textColor="@color/space_cadet"
+            android:background="@drawable/text_input_background"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/password"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
@@ -64,24 +61,22 @@
         android:layout_marginEnd="50dp"
         android:elevation="5dp"
         android:hint="@string/password"
-        android:shadowColor="@color/white"
+        app:hintTextColor="@color/space_cadet"
         android:textColorHint="@color/space_cadet"
-        app:boxBackgroundColor="@color/alice_blue"
-        app:boxCornerRadiusBottomEnd="20dp"
-        app:boxCornerRadiusBottomStart="20dp"
-        app:boxCornerRadiusTopEnd="20dp"
-        app:boxCornerRadiusTopStart="20dp"
-        app:hintAnimationEnabled="true"
+        android:shadowColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/username"
-        app:startIconDrawable="@drawable/ic_lock">
+        app:startIconDrawable="@drawable/ic_lock"
+        app:startIconTint="@color/space_cadet"
+        android:background="@drawable/text_input_background">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPassword"
-            android:textColor="@color/space_cadet" />
+            android:textColor="@color/space_cadet"
+            android:background="@drawable/text_input_background"/>
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -112,6 +107,7 @@
         android:alpha="0.5"
         android:backgroundTint="@color/space_cadet"
         android:text="@string/don_t_have_an_account"
+        android:textColor="@color/alice_blue"
         android:textAllCaps="false"
         android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="parent"

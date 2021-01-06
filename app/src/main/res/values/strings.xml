@@ -27,4 +27,13 @@
     <string name="your_hash_history_list">Your hash history</string>
     <string name="your_hash_s_tag">Your hash\'s tag</string>
     <string name="textview">TextView</string>
+    <string name="more">more</string>
+    <string name="sign_out">Sign out</string>
+    <string name="sections">sections</string>
+
+    <string-array name="hash_algorithms">
+        <item>SHA-256</item>
+        <item>SHA-512</item>
+        <item>MD5</item>
+    </string-array>
 </resources>
