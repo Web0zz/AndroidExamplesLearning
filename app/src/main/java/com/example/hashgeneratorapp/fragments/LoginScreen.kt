@@ -1,4 +1,4 @@
-package com.example.hashgeneratorapp
+package com.example.hashgeneratorapp.fragments
 
 import android.os.Bundle
 import android.view.*
@@ -13,7 +13,7 @@ class LoginScreen : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         _binding = FragmentLoginScreenBinding.inflate(inflater, container, false)
 
         return binding.root
