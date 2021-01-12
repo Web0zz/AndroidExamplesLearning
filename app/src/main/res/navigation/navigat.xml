@@ -3,33 +3,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navigat"
-    app:startDestination="@id/loginScreen">
+    app:startDestination="@id/homeScreen">
 
-    <fragment
-        android:id="@+id/loginScreen"
-        android:name="com.example.hashgeneratorapp.fragments.LoginScreen"
-        android:label="fragment_login_screen"
-        tools:layout="@layout/fragment_login_screen" >
-        <action
-            android:id="@+id/action_loginScreen_to_newUserScreen"
-            app:destination="@id/newUserScreen" />
-        <action
-            android:id="@+id/action_loginScreen_to_homeScreen"
-            app:destination="@id/homeScreen" />
-    </fragment>
-    <fragment
-        android:id="@+id/newUserScreen"
-        android:name="com.example.hashgeneratorapp.fragments.newUserScreen"
-        android:label="fragment_new_user_screen"
-        tools:layout="@layout/fragment_new_user_screen" >
-        <action
-            android:id="@+id/action_newUserScreen_to_homeScreen"
-            app:destination="@id/homeScreen" />
-    </fragment>
     <fragment
         android:id="@+id/homeScreen"
         android:name="com.example.hashgeneratorapp.fragments.homeScreen"
-        android:label="fragment_home_screen"
+        android:label="Home"
         tools:layout="@layout/fragment_home_screen" >
         <action
             android:id="@+id/action_homeScreen_to_newHashScreen"
@@ -41,7 +20,7 @@
     <fragment
         android:id="@+id/newHashScreen"
         android:name="com.example.hashgeneratorapp.fragments.newHashScreen"
-        android:label="fragment_new_hash_screen"
+        android:label="Create a new hash"
         tools:layout="@layout/fragment_new_hash_screen" >
         <action
             android:id="@+id/action_newHashScreen_to_hashHistoryScreen"
@@ -50,6 +29,6 @@
     <fragment
         android:id="@+id/hashHistoryScreen"
         android:name="com.example.hashgeneratorapp.fragments.hashHistoryScreen"
-        android:label="fragment_hash_history_screen"
+        android:label="History"
         tools:layout="@layout/fragment_hash_history_screen" />
 </navigation>

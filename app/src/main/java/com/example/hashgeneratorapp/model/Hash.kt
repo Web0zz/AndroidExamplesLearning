@@ -4,11 +4,11 @@ import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
-@Entity(tableName = "users_hash_table")
+@Entity(tableName = "hash_table")
 data class Hash(
-    @PrimaryKey(autoGenerate = false)
-    val hashOwnerId: String,
-    val hashTag: String,
-    val hashStyle: String,
-    val hash: String
+    @PrimaryKey(autoGenerate = true)
+    val hashId: Int,
+    @ColumnInfo(name = "hash_tag") val hashTag: String,
+    @ColumnInfo(name = "hash_style") val hashStyle: String,
+    @ColumnInfo(name = "hash") val hash: String
 )

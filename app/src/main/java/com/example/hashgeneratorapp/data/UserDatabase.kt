@@ -5,12 +5,9 @@ import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 import com.example.hashgeneratorapp.model.Hash
-import com.example.hashgeneratorapp.model.User
 
 @Database(
-        entities = [
-            User::class,
-            Hash::class],
+        entities = [Hash::class],
         version = 1
 )
 abstract class UserDatabase : RoomDatabase() {
