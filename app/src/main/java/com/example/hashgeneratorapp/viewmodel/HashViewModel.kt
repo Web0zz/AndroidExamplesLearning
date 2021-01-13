@@ -4,7 +4,7 @@ import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.viewModelScope
-import com.example.hashgeneratorapp.data.UserDatabase
+import com.example.hashgeneratorapp.data.HashDatabase
 import com.example.hashgeneratorapp.model.Hash
 import com.example.hashgeneratorapp.repository.HashRepository
 import kotlinx.coroutines.Dispatchers
@@ -17,7 +17,7 @@ class HashViewModel(application: Application): AndroidViewModel(application) {
     val hashDatabase: LiveData<List<Hash>>
 
     init{
-        val userDao = UserDatabase.getDatabase(application).userDao
+        val userDao = HashDatabase.getDatabase(application).hashDao
         repository = HashRepository(userDao)
         hashDatabase = repository.readAllHashData
     }

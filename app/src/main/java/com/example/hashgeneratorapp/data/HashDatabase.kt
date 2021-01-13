@@ -10,15 +10,15 @@ import com.example.hashgeneratorapp.model.Hash
         entities = [Hash::class],
         version = 1
 )
-abstract class UserDatabase : RoomDatabase() {
+abstract class HashDatabase : RoomDatabase() {
 
-    abstract val userDao: UserDao
+    abstract val hashDao: HashDao
 
     companion object {
         @Volatile
-        private var INSTANCE: UserDatabase? = null
+        private var INSTANCE: HashDatabase? = null
 
-        fun getDatabase(context: Context): UserDatabase {
+        fun getDatabase(context: Context): HashDatabase {
             val tempInstance = INSTANCE
             if(tempInstance != null){
                 return tempInstance
@@ -26,7 +26,7 @@ abstract class UserDatabase : RoomDatabase() {
             synchronized(this){
                 val instance = Room.databaseBuilder(
                         context.applicationContext,
-                        UserDatabase::class.java,
+                        HashDatabase::class.java,
                         "user_database"
                 ).build()
                 INSTANCE = instance

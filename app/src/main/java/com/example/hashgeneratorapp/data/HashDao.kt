@@ -5,7 +5,7 @@ import androidx.room.*
 import com.example.hashgeneratorapp.model.Hash
 
 @Dao
-interface UserDao {
+interface HashDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertHash(hash: Hash)
 

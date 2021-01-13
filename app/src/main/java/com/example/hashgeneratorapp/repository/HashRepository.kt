@@ -1,22 +1,22 @@
 package com.example.hashgeneratorapp.repository
 
 import androidx.lifecycle.LiveData
-import com.example.hashgeneratorapp.data.UserDao
+import com.example.hashgeneratorapp.data.HashDao
 import com.example.hashgeneratorapp.model.Hash
 
-class HashRepository(private val userDao: UserDao) {
+class HashRepository(private val hashDao: HashDao) {
 
-    val readAllHashData: LiveData<List<Hash>> = userDao.getAll()
+    val readAllHashData: LiveData<List<Hash>> = hashDao.getAll()
 
     suspend fun addHash(hash: Hash){
-        userDao.insertHash(hash)
+        hashDao.insertHash(hash)
     }
 
     suspend fun updateHash(hash: Hash){
-        userDao.updateHash(hash)
+        hashDao.updateHash(hash)
     }
 
     suspend fun deleteHash(hash: Hash){
-        userDao.deleteHash(hash)
+        hashDao.deleteHash(hash)
     }
 }
