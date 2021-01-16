@@ -19,12 +19,12 @@
     <string name="sha_256">SHA-256</string>
     <string name="your_hash_history_list">Your hash history</string>
     <string name="your_hash_s_tag">Your hash\'s tag</string>
-    <string name="textview">TextView</string>
     <string name="more">more</string>
     <string name="sign_out">Sign out</string>
     <string name="sections">sections</string>
     <string name="just_one_click_far_away">just one click far away</string>
     <string name="hash_style">Hash style</string>
+    <string name="textview">TextView</string>
 
     <string-array name="hash_algorithms">
         <item>SHA-256</item>

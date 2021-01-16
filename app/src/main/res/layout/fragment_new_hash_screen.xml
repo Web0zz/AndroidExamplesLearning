@@ -7,64 +7,39 @@
     tools:context=".fragments.newHashScreen"
     android:background="@color/space_cadet">
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/tagging_layout"
+    <EditText
+        android:id="@+id/hash_tag_input"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="25dp"
         android:layout_marginTop="150dp"
         android:layout_marginEnd="25dp"
+        android:textSize="16sp"
+        android:inputType="text"
+        android:hint="@string/tag_your_hash"
         android:textColorHint="@color/space_cadet"
         android:background="@drawable/text_input_background"
-        app:layout_constraintBottom_toTopOf="@+id/hash_type_layout"
+        app:layout_constraintBottom_toTopOf="@id/hash_selected_input"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        android:padding="15dp"
+        android:autofillHints=""/>
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/hash_tag"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/tag_your_hash"
-            android:textSize="16sp"
-            android:inputType="text"
-            android:background="@drawable/text_input_background"
-            android:paddingBottom="10dp"
-            android:paddingStart="10dp"
-            android:paddingEnd="10dp"/>
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/hash_type_layout"
+    <Spinner
+        android:id="@+id/hash_selected_input"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="25dp"
-        android:layout_marginTop="55dp"
+        android:layout_marginTop="50dp"
         android:layout_marginEnd="25dp"
-        android:textColorHint="@color/space_cadet"
-        app:layout_constraintEnd_toEndOf="@+id/tagging_layout"
-        app:layout_constraintStart_toStartOf="@+id/tagging_layout"
-        app:layout_constraintTop_toBottomOf="@+id/tagging_layout"
-        app:startIconDrawable="@drawable/ic_lock"
-        app:startIconTint="@color/space_cadet">
-
-        <AutoCompleteTextView
-            android:id="@+id/hash_selected"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="none"
-            android:paddingTop="12.5dp"
-            android:paddingBottom="12.5dp"
-            android:hint="@string/hash_style"
-            android:text="@string/sha_256"
-            android:textColor="@color/space_cadet"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:background="@drawable/text_input_background"
-            android:drawableEnd="@drawable/ic_dropdown"
-            android:paddingStart="10dp"
-            android:paddingEnd="10dp"/>
-    </com.google.android.material.textfield.TextInputLayout>
+        android:background="@drawable/text_input_background"
+        android:entries="@array/hash_algorithms"
+        android:padding="15dp"
+        android:backgroundTint="@color/alice_blue"
+        app:layout_constraintEnd_toEndOf="@id/hash_tag_input"
+        app:layout_constraintStart_toStartOf="@id/hash_tag_input"
+        app:layout_constraintTop_toBottomOf="@id/hash_tag_input"/>
 
     <EditText
         android:id="@+id/typed_text"
@@ -79,16 +54,15 @@
         android:gravity="start|top"
         android:hint="@string/type_here"
         android:autofillHints="@string/welcome"
-        android:inputType="text"
-        android:maxLines="6"
+        android:inputType="textMultiLine"
         android:padding="15dp"
         android:textColor="@color/space_cadet"
         android:textColorHint="@color/space_cadet"
         android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="@+id/hash_type_layout"
+        app:layout_constraintEnd_toEndOf="@id/hash_selected_input"
         app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="@+id/hash_type_layout"
-        app:layout_constraintTop_toBottomOf="@+id/hash_type_layout" />
+        app:layout_constraintStart_toStartOf="@id/hash_selected_input"
+        app:layout_constraintTop_toBottomOf="@id/hash_selected_input" />
 
     <Button
         android:id="@+id/generate_button"
@@ -101,7 +75,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/typed_text" />
+        app:layout_constraintTop_toBottomOf="@id/typed_text" />
 
     <TextView
         android:id="@+id/textView3"
@@ -112,9 +86,9 @@
         android:textSize="24sp"
         android:textStyle="bold"
         android:textColor="@color/alice_blue"
-        app:layout_constraintEnd_toEndOf="@+id/tagging_layout"
+        app:layout_constraintEnd_toEndOf="@id/hash_tag_input"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/tagging_layout"
+        app:layout_constraintStart_toStartOf="@id/hash_tag_input"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
@@ -126,11 +100,12 @@
         android:text="@string/tag_for_copy_this_hash_later"
         android:textColor="@color/alice_blue"
         android:textSize="16sp"
-        app:layout_constraintBottom_toTopOf="@+id/tagging_layout"
-        app:layout_constraintEnd_toEndOf="@+id/tagging_layout"
-        app:layout_constraintHorizontal_bias="0.056"
-        app:layout_constraintStart_toStartOf="@+id/tagging_layout"
-        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+        app:layout_constraintBottom_toTopOf="@id/hash_tag_input"
+        app:layout_constraintEnd_toEndOf="@id/hash_tag_input"
+        app:layout_constraintHorizontal_bias="0.023"
+        app:layout_constraintStart_toStartOf="@id/hash_tag_input"
+        app:layout_constraintTop_toBottomOf="@id/textView3"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/textView5"
@@ -140,10 +115,10 @@
         android:text="@string/select_which_hashing_algorithm_to_use"
         android:textColor="@color/alice_blue"
         android:textSize="16sp"
-        app:layout_constraintBottom_toTopOf="@+id/hash_type_layout"
-        app:layout_constraintEnd_toEndOf="@+id/hash_type_layout"
+        app:layout_constraintBottom_toTopOf="@id/hash_selected_input"
+        app:layout_constraintEnd_toEndOf="@id/hash_selected_input"
         app:layout_constraintHorizontal_bias="0.033"
-        app:layout_constraintStart_toStartOf="@+id/hash_type_layout" />
+        app:layout_constraintStart_toStartOf="@id/hash_selected_input" />
 
     <TextView
         android:id="@+id/textView6"
@@ -153,10 +128,10 @@
         android:text="@string/type_you_want_to_convert"
         android:textColor="@color/alice_blue"
         android:textSize="16sp"
-        app:layout_constraintBottom_toTopOf="@+id/typed_text"
-        app:layout_constraintEnd_toEndOf="@+id/typed_text"
+        app:layout_constraintBottom_toTopOf="@id/typed_text"
+        app:layout_constraintEnd_toEndOf="@id/typed_text"
         app:layout_constraintHorizontal_bias="0.021"
-        app:layout_constraintStart_toStartOf="@+id/typed_text" />
+        app:layout_constraintStart_toStartOf="@id/typed_text" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

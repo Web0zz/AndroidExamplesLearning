@@ -14,12 +14,12 @@ import java.security.MessageDigest
 class HashViewModel(application: Application): AndroidViewModel(application) {
 
     private val repository: HashRepository
-    val hashDatabase: LiveData<List<Hash>>
+    val hashDatabaseList: LiveData<List<Hash>>
 
     init{
         val userDao = HashDatabase.getDatabase(application).hashDao
         repository = HashRepository(userDao)
-        hashDatabase = repository.readAllHashData
+        hashDatabaseList = repository.readAllHashData
     }
 
     fun addNewHash(hash: Hash) {
