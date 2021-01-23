@@ -16,12 +16,8 @@
     <string name="tag_for_copy_this_hash_later">Tag for copy this hash later</string>
     <string name="select_which_hashing_algorithm_to_use">Select which hashing algorithm to use</string>
     <string name="type_you_want_to_convert">Type you want to convert</string>
-    <string name="sha_256">SHA-256</string>
     <string name="your_hash_history_list">Your hash history</string>
     <string name="your_hash_s_tag">Your hash\'s tag</string>
-    <string name="more">more</string>
-    <string name="sign_out">Sign out</string>
-    <string name="sections">sections</string>
     <string name="just_one_click_far_away">just one click far away</string>
     <string name="hash_style">Hash style</string>
     <string name="textview">TextView</string>
@@ -31,4 +27,7 @@
         <item>SHA-512</item>
         <item>MD5</item>
     </string-array>
+    <string name="copy">Copy</string>
+    <string name="delete">Delete</string>
+    <string name="adding">adding</string>
 </resources>

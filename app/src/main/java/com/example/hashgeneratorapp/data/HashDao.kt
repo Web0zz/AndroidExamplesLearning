@@ -15,6 +15,11 @@ interface HashDao {
     @Delete
     suspend fun deleteHash(hash: Hash)
 
+    @Query("SELECT * FROM hash_table WHERE hashId = :id")
+    suspend fun getfoundata(id: Int): Hash
+
     @Query("SELECT * FROM hash_table")
     fun getAll(): LiveData<List<Hash>>
+
+
 }

@@ -30,5 +30,24 @@
         android:id="@+id/hashHistoryScreen"
         android:name="com.example.hashgeneratorapp.fragments.hashHistoryScreen"
         android:label="History"
-        tools:layout="@layout/fragment_hash_history_screen" />
+        tools:layout="@layout/fragment_hash_history_screen" >
+        <action
+            android:id="@+id/action_hashHistoryScreen_to_selectedHashScreen"
+            app:destination="@id/selectedHashScreen" />
+        <action
+            android:id="@+id/action_hashHistoryScreen_to_newHashScreen"
+            app:destination="@id/newHashScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/selectedHashScreen"
+        android:name="com.example.hashgeneratorapp.fragments.selectedHashScreen"
+        android:label="fragment_selected_hash_screen"
+        tools:layout="@layout/fragment_selected_hash_screen" >
+        <argument
+            android:name="id"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_selectedHashScreen_to_hashHistoryScreen"
+            app:destination="@id/hashHistoryScreen" />
+    </fragment>
 </navigation>

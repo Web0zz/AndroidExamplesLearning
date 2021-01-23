@@ -8,15 +8,15 @@ class HashRepository(private val hashDao: HashDao) {
 
     val readAllHashData: LiveData<List<Hash>> = hashDao.getAll()
 
-    suspend fun addHash(hash: Hash){
+    suspend fun getData(id: Int): Hash {
+        return hashDao.getfoundata(id)
+    }
+
+    suspend fun addHash(hash: Hash) {
         hashDao.insertHash(hash)
     }
 
-    suspend fun updateHash(hash: Hash){
-        hashDao.updateHash(hash)
-    }
-
-    suspend fun deleteHash(hash: Hash){
+    suspend fun deleteHash(hash: Hash) {
         hashDao.deleteHash(hash)
     }
 }
